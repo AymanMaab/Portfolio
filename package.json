@@ -1,0 +1,28 @@
+{
+  "name": "@my-portfolio/monorepo",
+  "private": true,
+  "workspaces": ["apps/*", "packages/*"],
+  "packageManager": "npm@10.9.0",
+  "engines": { "node": ">=20.0.0" },
+  "scripts": {
+    "dev": "turbo run dev",
+    "dev:web": "turbo run dev --filter=@my-portfolio/web",
+    "dev:api": "turbo run dev --filter=@my-portfolio/api",
+    "build": "turbo run build",
+    "lint": "turbo run lint",
+    "format": "prettier --write \"**/*.{ts,tsx,js,json,md}\"",
+    "type-check": "turbo run type-check",
+    "test": "turbo run test",
+    "clean": "turbo run clean"
+  },
+  "devDependencies": {
+    "husky": "^9.0.0",
+    "lint-staged": "^16.0.0",
+    "prettier": "^3.4.0",
+    "turbo": "^2.0.0"
+  },
+  "lint-staged": {
+    "**/*.{ts,tsx,js}": ["eslint --fix", "prettier --write"],
+    "**/*.{json,md}": ["prettier --write"]
+  }
+}
