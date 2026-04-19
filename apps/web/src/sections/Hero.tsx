@@ -44,7 +44,7 @@ export function Hero() {
       />
 
       <motion.div
-        className="relative mx-auto w-full max-w-5xl overflow-hidden rounded-2xl border border-border bg-background p-8 md:p-28"
+        className="relative mx-auto w-full max-w-5xl overflow-hidden rounded-2xl border border-border bg-background p-6 md:p-12"
         variants={container}
         initial="hidden"
         animate="show"
