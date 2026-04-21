@@ -1,5 +1,6 @@
 import { Navbar } from './components/Navbar'
 import { Layout } from './components/Layout'
+import { Hero } from './sections/Hero'
 
 const SECTIONS = ['about', 'skills', 'experience', 'projects', 'contact'] as const
 
@@ -7,6 +8,7 @@ export default function App() {
   return (
     <>
       <Navbar />
+      <Hero />
       <Layout>
         {SECTIONS.map((id) => (
           <section key={id} id={id} className="min-h-screen py-20">
