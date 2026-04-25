@@ -68,6 +68,36 @@
   --ring:                  #6366f1;
 
   --radius:                0.5rem;
+  --glow:                  rgba(255, 255, 255, 0.30);
+}
+
+/* Light mode — opt-in via .light class on <html> */
+.light {
+  --background:            #ffffff;
+  --foreground:            #0a0a0a;
+  --surface:               #f9f9f9;
+
+  --card:                  #ffffff;
+  --card-foreground:       #0a0a0a;
+  --popover:               #ffffff;
+  --popover-foreground:    #0a0a0a;
+
+  --primary:               #111111;
+  --primary-foreground:    #ffffff;
+  --secondary:             #f3f4f6;
+  --secondary-foreground:  #111111;
+
+  --muted:                 #f3f4f6;
+  --muted-foreground:      #6b7280;
+
+  --accent:                #f3f4f6;
+  --accent-foreground:     #111111;
+
+  --destructive:           oklch(0.577 0.245 27.325);
+  --border:                #e5e7eb;
+  --input:                 #e5e7eb;
+  --ring:                  #6366f1;
+  --glow:                  rgba(0, 0, 0, 0.30);
 }
 
 @layer base {
