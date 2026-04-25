@@ -108,7 +108,7 @@ export function Hero() {
           aria-hidden
           className="pointer-events-none absolute -right-20 -top-20 h-80 w-80 rounded-full"
           style={{
-            background: 'radial-gradient(ellipse at top right, var(--glow) 0%, transparent 75%)',
+            background: 'radial-gradient(ellipse at top right, rgba(255,255,255,0.20) 0%, transparent 75%)',
             filter: 'blur(16px)',
           }}
         />
@@ -116,7 +116,7 @@ export function Hero() {
           aria-hidden
           className="pointer-events-none absolute -bottom-20 -left-20 h-80 w-80 rounded-full"
           style={{
-            background: 'radial-gradient(ellipse at bottom left, var(--glow) 0%, transparent 75%)',
+            background: 'radial-gradient(ellipse at bottom left, rgba(255,255,255,0.20) 0%, transparent 75%)',
             filter: 'blur(16px)',
           }}
         />
