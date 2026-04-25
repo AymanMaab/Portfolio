@@ -1,13 +1,12 @@
 import { Navbar } from './components/Navbar'
 import { Layout } from './components/Layout'
 import { Hero } from './sections/Hero'
-import { ThemeProvider } from './lib/theme'
 
 const SECTIONS = ['about', 'skills', 'experience', 'projects', 'contact'] as const
 
 export default function App() {
   return (
-    <ThemeProvider>
+    <>
       <Navbar />
       <Hero />
       <Layout>
@@ -17,6 +16,6 @@ export default function App() {
           </section>
         ))}
       </Layout>
-    </ThemeProvider>
+    </>
   )
 }
