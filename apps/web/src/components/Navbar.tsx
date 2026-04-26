@@ -82,7 +82,7 @@ export function Navbar() {
           <div className="hidden items-center gap-2 md:flex">
             <Tooltip>
               <TooltipTrigger>
-                <Button variant="outline" size="icon" onClick={toggle} aria-label="Toggle theme">
+                <Button variant="outline" size="icon" onClick={toggle} aria-label="Toggle theme" className="bg-transparent hover:bg-foreground/5">
                   {theme === 'dark' ? <Sun size={16} /> : <Moon size={16} />}
                 </Button>
               </TooltipTrigger>
