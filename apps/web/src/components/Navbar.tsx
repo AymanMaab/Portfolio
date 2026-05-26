@@ -1,16 +1,18 @@
 import { useState, useEffect } from 'react'
 import { useTheme } from '../lib/theme'
 import { Button, buttonVariants } from './ui/button'
-import { Menu, X, Sun, Moon } from 'lucide-react'
+import { Menu, X, Sun, Moon, Github } from 'lucide-react'
 import { Tooltip, TooltipTrigger, TooltipContent, TooltipProvider } from './ui/tooltip'
 import { cn } from '../lib/utils'
 
+const GITHUB_REPO_URL = "https://github.com/AymanMaab/Portfolio"
+
 const NAV_LINKS = [
-  { label: 'Projects', href: '#projects' },
-  { label: 'Experience', href: '#experience' },
-  { label: 'Skills', href: '#skills' },
-  { label: 'About', href: '#about' },
-  { label: 'Contact', href: '#contact' },
+  { label: 'About', href: '#about', type: "hash" as const},
+  { label: 'Skills', href: '#skills', type: "hash" as const },
+  { label: 'Experience', href: '#experience', type: "hash" as const },
+  { label: 'Projects', href: '#projects', type: "hash" as const },
+  { label: 'Contact', href: '#contact', type: "hash" as const },
 ]
 
 export function Navbar() {
@@ -55,7 +57,7 @@ export function Navbar() {
             <span className="flex h-8 w-8 items-center justify-center rounded-full bg-foreground text-xs font-bold text-background">
               AM
             </span>
-            <div className="hidden flex-col sm:flex">
+            <div className="hidden flex-col sm:flex cursor-pointer">
               <span className="text-sm font-semibold leading-none text-foreground">Ayman Maab</span>
               <span className="mt-0.5 text-xs text-muted-foreground">Software Engineer</span>
             </div>
@@ -82,13 +84,26 @@ export function Navbar() {
           <div className="hidden items-center gap-2 md:flex">
             <Tooltip>
               <TooltipTrigger>
-                <Button variant="outline" size="icon" onClick={toggle} aria-label="Toggle theme">
+                <Button variant="outline" size="icon" onClick={toggle} aria-label="Toggle theme" className="bg-transparent hover:bg-foreground/5">
                   {theme === 'dark' ? <Sun size={16} /> : <Moon size={16} />}
                 </Button>
               </TooltipTrigger>
               <TooltipContent>{theme === 'dark' ? 'Light mode' : 'Dark mode'}</TooltipContent>
             </Tooltip>
 
+            <Button
+              asChild
+              variant='outline'
+              size='icon'
+              className='rounded-xl hidden md:inline-flex'
+              aria-label='View source on Github'
+            >
+              <a href={GITHUB_REPO_URL} target='_blank' rel='noreferrer'>
+                <Github className='h-5 w-5' />
+              </a>
+              </Button>
+
+            <Button asChild className='rounded-xl hidden md:inline-flex'>
             <a
               href="/resume.pdf"
               target="_blank"
@@ -97,6 +112,7 @@ export function Navbar() {
             >
               Resume
             </a>
+          </Button>
           </div>
 
           <Button
