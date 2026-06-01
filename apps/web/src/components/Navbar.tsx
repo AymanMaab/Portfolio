@@ -1,7 +1,8 @@
 import { useState, useEffect } from 'react'
 import { useTheme } from '../lib/theme'
 import { Button, buttonVariants } from './ui/button'
-import { Menu, X, Sun, Moon, Github } from 'lucide-react'
+import { Menu, X, Sun, Moon } from 'lucide-react'
+import { FaGithub } from 'react-icons/fa'
 import { Tooltip, TooltipTrigger, TooltipContent, TooltipProvider } from './ui/tooltip'
 import { cn } from '../lib/utils'
 
@@ -99,7 +100,7 @@ export function Navbar() {
               aria-label='View source on Github'
             >
               <a href={GITHUB_REPO_URL} target='_blank' rel='noreferrer'>
-                <Github className='h-5 w-5' />
+                <FaGithub className='h-5 w-5' />
               </a>
               </Button>
 

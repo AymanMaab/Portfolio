@@ -1,13 +1,9 @@
-import { useState } from 'react'
 import { Menu } from 'lucide-react'
 import { NAV_LINKS } from '../../constants/navlinks'
 import { Sheet, SheetContent, SheetTrigger } from '../ui/sheet'
 
 export function MobileNav() {
-  const [open, setOpen] = useState(false)
-
   function handleNavClick(id: string) {
-    setOpen(false)
     setTimeout(() => {
       document.getElementById(id)?.scrollIntoView({ behavior: 'smooth', block: 'start' })
     }, 50)

@@ -1,6 +1,11 @@
 import * as React from 'react'
 import { cn } from '../../lib/utils'
 
+export function TooltipProvider({ children }: { children: React.ReactNode }) {
+  return <>{children}</>
+}
+
+/** @deprecated use TooltipProvider */
 export function TooltioProvider({ children }: { children: React.ReactNode }) {
   return <>{children}</>
 }
@@ -24,6 +29,7 @@ export function TooltipContent({ children, className }: { children: React.ReactN
       )}
     >
       {children}
+      <span className="absolute top-full left-1/2 -translate-x-1/2 border-4 border-transparent border-t-foreground" />
     </div>
   )
 }
