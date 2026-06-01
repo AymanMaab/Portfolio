@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import * as TooltipPrimitive from "@radix-ui/react-tooltip"
 
 import { cn } from "@/lib/utils"
@@ -54,3 +55,34 @@ function TooltipContent({
 }
 
 export { Tooltip, TooltipTrigger, TooltipContent, TooltipProvider }
+=======
+import * as React from 'react'
+import { cn } from '../../lib/utils'
+
+export function TooltioProvider({ children }: { children: React.ReactNode }) {
+  return <>{children}</>
+}
+
+export function Tooltip({ children }: { children: React.ReactNode }) {
+  return <div className="relative inline-flex group">{children}</div>
+}
+
+export function TooltipTrigger({ children, asChild }: { children: React.ReactNode; asChild?: boolean }) {
+  if (asChild && React.isValidElement(children)) return children
+  return <>{children}</>
+}
+
+export function TooltipContent({ children, className }: { children: React.ReactNode; className?: string }) {
+  return (
+    <div
+      className={cn(
+        'absolute bottom-full left-1/2 -translate-x-1/2 mb-2 hidden group-hover:block',
+        'rounded-md bg-foreground px-2 py-1 text-xs text-background whitespace-nowrap',
+        className
+      )}
+    >
+      {children}
+    </div>
+  )
+}
+>>>>>>> c90f8b8 (remove api, add hero tooltip and height adjustments, add skills section, refine navbar section, refactor entire project directory)
