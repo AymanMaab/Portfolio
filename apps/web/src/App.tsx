@@ -2,13 +2,13 @@ import { Navbar } from './components/layout/Navbar'
 import { HeroSection } from './components/sections/hero/HeroSection'
 import { SkillsSection } from './components/sections/skills/SkillsSection'
 
-const SECTION_CLASS = 'py-24 px-6 md:px-24 border-b border-border'
+const SECTION_CLASS = 'py-28 border-b border-border/40'
 
 export default function App() {
   return (
     <div className="min-h-screen bg-background text-foreground">
       <Navbar />
-      <main className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 space-y-14 pb-24">
+      <main className="mx-auto max-w-7xl px-6 sm:px-10 lg:px-20 space-y-20 pb-32">
         <HeroSection />
 
         <section id="projects" className={SECTION_CLASS}>

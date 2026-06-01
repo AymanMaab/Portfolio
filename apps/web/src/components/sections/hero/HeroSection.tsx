@@ -70,8 +70,48 @@ export function HeroSection() {
             <SocialChips className="pt-2" />
           </div>
 
-          {/* right column — TODO: build this panel */}
-          <div className="hidden md:block md:justify-self-end w-full max-w-[260px] lg:max-w-[280px] md:min-h-[562px]" />
+          {/* right column — profile card */}
+          <div className="hidden md:flex md:flex-col md:justify-self-end w-full max-w-[260px] lg:max-w-[280px] gap-4">
+            {/* avatar + name */}
+            <div className="rounded-2xl border border-border/40 bg-muted/20 p-6 flex flex-col items-center gap-4 text-center">
+              <img
+                src="/avatar.jpeg"
+                alt="Ayman Maab"
+                className="h-20 w-20 rounded-full object-cover border border-primary/20"
+              />
+              <div>
+                <div className="font-semibold text-base">Ayman Maab</div>
+                <div className="text-xs text-muted-foreground mt-0.5">Software Engineer</div>
+              </div>
+              <div className="w-full flex flex-col gap-2 pt-2 border-t border-border/40">
+                {[
+                  { label: 'Focus', value: 'Full-Stack' },
+                  { label: 'Stack', value: 'React · Node · TS' },
+                  { label: 'Status', value: 'Open to work' },
+                ].map(({ label, value }) => (
+                  <div key={label} className="flex justify-between items-center text-xs">
+                    <span className="text-muted-foreground">{label}</span>
+                    <span className="font-medium">{value}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* quick stats */}
+            <div className="grid grid-cols-2 gap-3">
+              {[
+                { stat: '1+', label: 'Years exp.' },
+                { stat: '10+', label: 'Projects' },
+                { stat: '5+', label: 'Tech stacks' },
+                { stat: '∞', label: 'Coffee' },
+              ].map(({ stat, label }) => (
+                <div key={label} className="rounded-xl border border-border/40 bg-muted/20 p-4 flex flex-col items-center gap-1">
+                  <span className="text-xl font-bold text-primary">{stat}</span>
+                  <span className="text-[10px] text-muted-foreground text-center leading-tight">{label}</span>
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
       </div>
     </section>
