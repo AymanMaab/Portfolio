@@ -1,6 +1,7 @@
 import { Navbar } from './components/layout/Navbar'
 import { HeroSection } from './components/sections/hero/HeroSection'
 import { SkillsSection } from './components/sections/skills/SkillsSection'
+import { ContactSection } from './components/sections/contact/ContactSection'
 
 const SECTION_CLASS = 'py-28 border-b border-border/40'
 
@@ -26,8 +27,7 @@ export default function App() {
         </section>
 
         <section id="contact" className="py-24">
-          <h2 className="text-xl font-semibold">Contact</h2>
-          <p className="mt-2 text-muted-foreground">Form wiring in Phase 4</p>
+          <ContactSection />
         </section>
       </main>
     </div>
