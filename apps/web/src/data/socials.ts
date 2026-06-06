@@ -1,5 +1,5 @@
 import type { ComponentType } from 'react'
-import { LuMail, LuLinkedin, LuGithub } from 'react-icons/lu'
+import { LuMail, LuLinkedin, LuGithub, LuMessageCircle } from 'react-icons/lu'
 
 export type SocialLink = {
   id: number
@@ -31,6 +31,13 @@ export const primarySocials: SocialLink[] = [
     href: 'https://github.com/AymanMaab',
     icon: LuGithub,
   },
+  {
+    id: 4,
+    title: 'WhatsApp',
+    value: '+92 315 9817025',
+    href: 'https://wa.me/923159817025',
+    icon: LuMessageCircle,
+  }
 ]
 
 export const allSocials: SocialLink[] = [...primarySocials]
