@@ -1,4 +1,5 @@
 import { Navbar } from './components/layout/Navbar'
+import { Footer } from './components/layout/Footer'
 import { HeroSection } from './components/sections/hero/HeroSection'
 import { SkillsSection } from './components/sections/skills/SkillsSection'
 
@@ -8,7 +9,7 @@ export default function App() {
   return (
     <div className="min-h-screen bg-background text-foreground">
       <Navbar />
-      <main className="mx-auto max-w-7xl px-6 sm:px-10 lg:px-20 space-y-20 pb-32">
+      <main className="mx-auto max-w-7xl px-6 sm:px-10 lg:px-20 space-y-20 pb-16">
         <HeroSection />
 
         <section id="projects" className={SECTION_CLASS}>
@@ -30,6 +31,7 @@ export default function App() {
           <p className="mt-2 text-muted-foreground">Form wiring in Phase 4</p>
         </section>
       </main>
+      <Footer />
     </div>
   )
 }
